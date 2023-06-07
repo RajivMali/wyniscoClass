@@ -1,5 +1,5 @@
-const data = require('./Student_Data.json')
-const _ = require('lodash')
+// const data = require('./Student_Data.json')
+// const _ = require('lodash')
 // import data from './Student_Data.json'
 
 
@@ -375,30 +375,49 @@ const _ = require('lodash')
 // // find
 
 // // 
-// let census2020 = [
-//     {"state": "Connecticut", "ppl": 3605944, "isNE": true},
-//     {"state": "Maine", "ppl": 1362359, "isNE": true},
-//     {"state": "Massachusetts", "ppl": 7029917, "isNE": true},
-//     {"state": "New Hampshire", "ppl": 1377529, "isNE": true},
-//     {"state": "New Jersey", "ppl": 9288994, "isNE": false},
-//     {"state": "New York", "ppl": 20201249, "isNE": false},
-//     {"state": "Pennsylvania", "ppl": 13002700, "isNE": false},
-//     {"state": "Rhode Island", "ppl": 1097379, "isNE": true},
-//     {"state": "Vermont", "ppl": 643077, "isNE": true},
-//     ];
-//      let stateSize = [
-//     {"state": "Vermont", "sqm": 9623},
-//     {"state": "Vermont", "sqm": 11111},
-//     {"state": "New York", "sqm": 54556},
-//     {"state": "Connecticut", "sqm": 5543},
-//     {"state": "Pennsylvania", "sqm": 46055},
-//     {"state": "New Jersey", "sqm": 8729},
-//     {"state": "Massachusetts", "sqm": 10565},
-//     {"state": "New Hampshire", "sqm": 9350},
-//     {"state": "Maine", "sqm": 35385},
-//     {"state": "Rhode Island", "sqm": 1214},
-//     ];
+let census2020 = [
+    {"state": "Connecticut", "ppl": 3605944, "isNE": true},
+    {"state": "Maine", "ppl": 1362359, "isNE": true},
+    {"state": "Massachusetts", "ppl": 7029917, "isNE": true},
+    {"state": "New Hampshire", "ppl": 1377529, "isNE": true},
+    {"state": "New Jersey", "ppl": 9288994, "isNE": false},
+    {"state": "New York", "ppl": 20201249, "isNE": false},
+    {"state": "Pennsylvania", "ppl": 13002700, "isNE": false},
+    {"state": "Rhode Island", "ppl": 1097379, "isNE": true},
+    {"state": "Vermont", "ppl": 643077, "isNE": true},
+    ];
+     let stateSize = [
+    {"state": "Vermont", "sqm": 11111},
+    {"state": "New York", "sqm": 54556},
+    {"state": "Connecticut", "sqm": 5543},
+    {"state": "Pennsylvania", "sqm": 46055},
+    {"state": "New Jersey", "sqm": 8729},
+    {"state": "Massachusetts", "sqm": 10565},
+    {"state": "New Hampshire", "sqm": 9350},
+    {"state": "Maine", "sqm": 35385},
+    {"state": "Rhode Island", "sqm": 1214},
+    ];
+   function calDensity (ppl, sqm, isRaw){
+        return isRaw ? ppl/sqm : Math.round(ppl/sqm);
+         }
+// Requirements --- majority ( density - rounded of nearest, default)
+//ability to handle and send raw density
+    let convertedData = census2020.map(i=> {
+        const {state,ppl} = i
+        const sqm = stateSize.find(k=>k.state === state).sqm
+       return {
+            state,
+            density: calDensity(ppl, sqm, true)    
+        };
+    })
+    console.log(convertedData)
     
+
+       // stateSize.find(sqm)
+    // const found = stateSize.find(i=>i.state="Vermont")
+
+    // console.log(found, 'found');
+   
 //     console.log(stateSize.find((item) =>item.state === "Vermont"));
 //     console.log(stateSize.filter((item) =>item.state === "Vermont"));
 
@@ -490,27 +509,27 @@ const _ = require('lodash')
 // console.log(evens ,'events');
 
 
-let  obj11 ={
-    name:'Sachin',
-    gav:'gav',
-    education :{
-        masters:{
-            major:"Telecom",
-            minor:"Management",
+// let  obj11 ={
+//     name:'Sachin',
+//     gav:'gav',
+//     education :{
+//         masters:{
+//             major:"Telecom",
+//             minor:"Management",
             
-        }
-    }
-}
+//         }
+//     }
+// }
 
-let myCopy = {...obj11}
+// let myCopy = {...obj11}
 
-myCopy.name = "Sachin Refreshed"
-myCopy.education.masters.major = "Computer Science"
+// myCopy.name = "Sachin Refreshed"
+// myCopy.education.masters.major = "Computer Science"
 
-console.log(myCopy.name);
-console.log(obj11.name);
-console.log(myCopy.education.masters.major);
-console.log(obj11.education.masters.major);
+// console.log(myCopy.name);
+// console.log(obj11.name);
+// console.log(myCopy.education.masters.major);
+// console.log(obj11.education.masters.major);
 
 // Sachin Refreshed
 // Sachin

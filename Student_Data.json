@@ -7,7 +7,7 @@
     "Job_Title": "Engineer     Software",
     "Job_Start_Date": "6/20/2020",
     "Career_Url": "https://ibegin.tcs.com/iBegin/jobs/search",
-    "isValidOb":true,
+    "isValid":true,
     "favs":["2344","3455","445666"],
     "auth":true
     
@@ -609,7 +609,7 @@
     "Employer": "Visa",
     "Job_Title": "Senior Software Engineer Intern",
     "Job_Start_Date": "5/1/2020",
-    "Career_Url": "https://usa.visa.com/careers.html"
+    "Career_Url": "https://citigrouprewards.com/citigrouprewards "
   },
   
   {
@@ -619,7 +619,36 @@
     "Employer": "DreamingCode",
     "Job_Title": "Data Analyst / Data Engineer",
     "Job_Start_Date": "6/1/2020",
-    "Career_Url": "https://www.dreamingcode.com/careers/"
+    "Career_Url": "https://citigroup.com/test/test/test "
+  },
+
+  {
+    "University_Name": "University of North Carolina at Charlotte",
+    "Specialization": "Compute Science",
+    "Graduation_Year": 2030,
+    "Employer": "TCS",
+    "Job_Title": "Engineer     Software",
+    "Job_Start_Date": "6/20/2020",
+    "Career_Url": "https://citigroup.com/citigrouprewards/test",
+    "isValidOb":true,
+    "favs":["2344","3455","446"],
+    "auth":true
+    
+  },
+
+  {
+    "University_Name": "Northeastern University",
+    "Specialization": "Computer System Engineering - Internet of Things",
+    "Graduation_Year": 2016,
+    "Employer": "DreamingCode",
+    "Job_Title": "Data Analyst / Data Engineer",
+    "Job_Start_Date": "6/1/2020",
+    "Career_Url": "https://ciigroup.com/citigrouprewards",
+    "favs":["2344","345","445666414141"],
+    "address": {
+      "streetName" : "winthrop",
+      "city" : "cary"
+    }
   }
 
 ]
